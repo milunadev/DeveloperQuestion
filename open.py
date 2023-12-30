@@ -11,8 +11,8 @@ def abrir_urls_por_grupo(archivo, grupo):
     for url in urls:
         webbrowser.open_new_tab(url.strip())
 
-archivo_urls = 'urls_dva.txt'  # Nombre de tu archivo
-grupo_deseado = 34
+archivo_urls = 'devops.txt'  # Nombre de tu archivo
+grupo_deseado = 7
   # Cambia esto al grupo que deseas abrir (1, 2, 3, etc.)
 #27
 abrir_urls_por_grupo(archivo_urls, grupo_deseado)

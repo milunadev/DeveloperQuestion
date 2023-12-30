@@ -18,7 +18,7 @@ def obtener_urls_dva(url_base, rango_inicio, rango_fin):
         # Iterar a través de cada 'discussion-row'
         for row in discussion_rows:
             link = row.find('a', class_='discussion-link')
-            if link and 'Developer Associate topic' in link.text:
+            if link and 'DOP-C02' in link.text:
                 url_completa = f"https://www.examtopics.com{link['href']}"
                 urls_encontradas.append(url_completa)
 
@@ -39,8 +39,8 @@ for inicio in range(0, numero_paginas, lote_tamano):
     urls_dva = obtener_urls_dva(url_base, inicio, fin)
 
     # Guardar las URLs en un archivo
-    with open('developer_topics.txt', 'a') as archivo:
+    with open('devops.txt', 'a') as archivo:
         for url in urls_dva:
             archivo.write(url + '\n')
 
-    print(f"Guardadas URLs de las páginas {inicio} a {fin} en 'urls_dva.txt'")
+    print(f"Guardadas URLs de las páginas {inicio} a {fin} en 'devops.txt'")
